@@ -1,0 +1,260 @@
+/* styles.css */
+
+/* Body Styling */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Background gradient */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Trail Styling */
+  #trail-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  .trail {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease-out;
+  }
+  
+  .trail1 {
+    background-color: #e43912; /* Red */
+  }
+  
+  .trail2 {
+    background-color: gray; /* Yellow */
+  }
+  
+  .trail3 {
+    background-color: white /* Light Green */
+  }
+  
+  .trail4 {
+    background-color: rgb(59, 59, 184); /* Aqua */
+  }
+  
+  .trail5 {
+    background-color: rgb(42, 182, 42); /* Pink */
+  }
+  
+/* Header Logo Styling */
+.header-logo {
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.logo-image {
+  width: 150px; /* Adjust size */
+  height: auto;
+  margin-bottom: 5px; /* Space below the logo */
+}
+
+
+
+  
+  /* Login Container Styling */
+  .login-container {
+    position: relative;
+    z-index: 10;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px 30px;
+    width: 350px;
+    height: 350px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .input-group {
+    margin-top: 0px;
+    margin-bottom: 12px;
+    margin-right: 20px;
+    text-align: left;
+  }
+  
+  /* .input-group label {
+    display: block;
+    font-size: 14px;
+    color: #eee8e8;
+  } */
+  
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+   
+  }
+  
+  .login-button {
+    width: 100%;
+    height: 60px;   
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .login-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .links {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+  
+  .links a {
+
+    margin: 30px;
+    text-decoration: none;
+    color: #007BFF;
+    transition: color 0.3s ease;
+  }
+  
+  .links a:hover {
+    color: #0056b3;
+  }
+  /* Input field styling */
+/* Input field styling */
+.colorful-input {
+  justify-content: center;
+  width: 100%;
+  padding: 15px; /* Increased padding for a larger field */
+  margin-top: 10px;
+  border: 2px solid #ddd;
+  border-radius: 8px; /* Smooth rounded corners */
+  font-size: 18px; /* Increased font size */
+  transition: background 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+  outline: none;
+}
+
+/* Hover effect on input field */
+.colorful-input:hover {
+  border-color: #FF5733; /* Red border */
+  background: linear-gradient(135deg, #FF5733, #FFC300, #33FFCE); /* Gradient background */
+  box-shadow: 0px 6px 20px rgba(255, 87, 51, 0.6); /* Glowing shadow */
+}
+
+/* Focus effect on input field */
+.colorful-input:focus {
+  border-color: #33FFCE; /* Aqua border */
+  background: linear-gradient(135deg, #FFC300, #DAF7A6, #FF5733); /* Different gradient */
+  box-shadow: 0px 8px 25px rgba(51, 255, 206, 0.7); /* Stronger glowing shadow */
+}
+
+/* Text element styling */
+.text-element {
+  display: inline-block;
+  font-size: 16px;
+  color: #333;
+  padding: 10px 15px;
+  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effect on text elements */
+.text-element:hover {
+  color: #FF5733; /* Changes to a bright color */
+  text-shadow: 0px 4px 10px rgba(255, 87, 51, 0.6); /* Glowing text shadow */
+  transform: scale(1.1); /* Slightly enlarges the text */
+}
+
+/* Active effect on text elements */
+.text-element:active {
+  transform: scale(0.95); /* Shrinks slightly when clicked */
+  color: #FFC300; /* Yellow color on click */
+}
+
+
+/* Styling for the Powered By section */
+.powered-by {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px; /* Space above */
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  color: #777; /* Subtle text color */
+  letter-spacing: 0.5px;
+  margin-top: 20px;
+}
+
+.powered-by strong {
+  color: #333; /* Highlighted text color */
+}
+
+ .powered-logo{
+  width: 50px; /* Adjust logo size */
+  height: auto;
+  margin-left: 8px; /* Space between text and logo */
+  
+  border-radius: 5px; /* Optional: Rounded corners */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow */
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px; /* Add padding for smaller screens */
+    }
+
+    .logo-image {
+        width: 120px; /* Smaller logo for smaller screens */
+    }
+
+    .login-container {
+        width: 90%; /* Full width for mobile */
+        padding: 15px; /* Adjust padding */
+        height: auto; /* Adjust height dynamically */
+    }
+
+    .colorful-input {
+        font-size: 14px; /* Smaller font for mobile */
+        padding: 12px; /* Adjust padding */
+    }
+
+    .login-button {
+        font-size: 14px; /* Adjust button size */
+        height: 50px;
+    }
+
+    .links a {
+        font-size: 12px; /* Smaller font for links */
+    }
+
+    .powered-by {
+        font-size: 12px; /* Smaller font for powered-by section */
+    }
+
+    .powered-logo {
+        width: 40px; /* Smaller logo */
+    }
+}
+
+  

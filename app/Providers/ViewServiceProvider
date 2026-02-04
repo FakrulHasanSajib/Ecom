@@ -1,0 +1,33 @@
+<?php
+use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\View;
+use App\Models\Pixel; // আপনার পিক্সেল মডেলটি ধরে নিলাম Pixel
+
+class ViewServiceProvider extends ServiceProvider
+{
+    //... (register method)
+
+    public function boot()
+    {
+        // View Composer ব্যবহার করে নির্দিষ্ট ভিউগুলিতে ডেটা স্বয়ংক্রিয়ভাবে পাস করা
+        View::composer([
+            'campaign',          // campaign.blade.php
+            'campaign-two',      // campaign-two.blade.php
+            'campain-three',     // campain-three.blade.php
+            'campaign-four',     // campaign-four.blade.php
+            'campain-five',      // campain-five.blade.php
+        ], function ($view) {
+            
+            // ১. ডেটাবেস থেকে প্রয়োজনীয় পিক্সেল ডেটা নিয়ে আসা
+            // এটি আপনার Controller-এর লজিক, যা এখন এখানে কেন্দ্রীয়ভাবে থাকল।
+            $pixels = Pixel::where('status', 1)->get(); 
+            
+            // ২. $pixels ভ্যারিয়েবলটিকে ভিউ-এ পাস করা
+            $view->with('pixels', $pixels);
+        });
+
+        // যদি আপনার সব ক্যাম্পেইন পেজ একটি মাস্টার লেআউট (যেমন 'layouts.campaign') ব্যবহার করে, 
+        // তবে শুধু সেই লেআউট ফাইলটি এখানে উল্লেখ করলেই হবে।
+        // View::composer('layouts.campaign', function ($view) { /* ... */ });
+    }
+}

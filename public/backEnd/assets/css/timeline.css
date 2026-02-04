@@ -1,0 +1,98 @@
+/* Timeline Container */
+.timeline {
+    position: relative;
+    padding: 20px;
+}
+
+/* Timeline Event Styles */
+.timeline__event {
+    position: relative;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-left: 4px solid #007bff;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Event Icon Styles */
+.timeline__event__icon {
+    position: absolute;
+    left: -25px;
+    top: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 30px;
+    color: #007bff;
+}
+
+/* Date Text Style */
+.timeline__event__date {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+/* Event Title Style */
+.timeline__event__title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Event Description Text Style */
+.timeline__event__description {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Event Type Specific Styles */
+.timeline__event--type1 {
+    border-color: #ff6347; /* Example: red color */
+}
+
+.timeline__event--type2 {
+    border-color: #28a745; /* Example: green color */
+}
+
+.timeline__event--type3 {
+    border-color: #ffc107; /* Example: yellow color */
+}
+
+/* Animations */
+.fadeInUp {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.delay-1s {
+    animation-delay: 1s;
+}
+
+.delay-2s {
+    animation-delay: 2s;
+}
+
+.delay-3s {
+    animation-delay: 3s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .timeline__event {
+        padding-left: 50px;
+    }
+
+    .timeline__event__icon {
+        left: -10px;
+    }
+}
